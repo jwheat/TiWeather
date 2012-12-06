@@ -12,12 +12,31 @@
  * PNG Weather Images supplied by - http://www.youtoart.com/html/Icon/Other/4652.html 
  * Original weather concept pulled from : https://github.com/bob-sims/GWeather
  * 
+ * Application Notes :
+ * - The database is seeded with some weather, but that will be overwritten.
+ * - The weather images supplied above, are off by 1 from what yahoo actually expects, so you'll see 
+ *   parseInt(code) + 1 in there to get the correct png file
+ * 
  */
 
 //bootstrap and check dependencies
 if (Ti.version < 1.8 ) {
 	alert('Sorry - this application template requires Titanium Mobile SDK 1.8 or later');	  	
 }
+
+// Determine the OS because we'll need this later
+if(Titanium.Platform.osname==='android'){
+    isAndroid=true;
+} else {
+	isAndroid=false;
+}
+
+// Register our database for storing offline (last) weather
+Ti.Database.install('tiweather.sqlite', 'tiweather');
+
+// Include our get weather library
+Ti.include(	'/getWeather.js' );
+
 
 // This is a single context application with mutliple windows in a stack
 (function() {
