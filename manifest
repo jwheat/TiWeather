@@ -3,6 +3,6 @@
 #url:http://codedog.net
 #image:appicon.png
 #appid:net.codedog.tiweather
-#desc:not specified
+#desc:This is to demonstrate how to grab a weather feed from yahoo, parse it, save it into a database, and spin through and display it on the screen.  With Pull down refresh :)
 #type:mobile
 #guid:1c826eb5-8929-4620-9802-e05652ea2001

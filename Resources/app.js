@@ -1,5 +1,5 @@
 /*
- * TiWeather V0.1
+ * TiWeather
  * Weather app for Appcelerator Titanium
  * =====================================
  * Coded By Jonathan Wheat 
@@ -18,6 +18,10 @@
  *   parseInt(code) + 1 in there to get the correct png file
  * 
  */
+
+// zipcode of the place we want the weather for
+var wxLocation = '17019';
+
 
 //bootstrap and check dependencies
 if (Ti.version < 1.8 ) {

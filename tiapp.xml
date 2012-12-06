@@ -19,7 +19,7 @@
     <version>1.0</version>
     <publisher>jwheat</publisher>
     <url>http://codedog.net</url>
-    <description>not specified</description>
+    <description>This is to demonstrate how to grab a weather feed from yahoo, parse it, save it into a database, and spin through and display it on the screen.  With Pull down refresh :)</description>
     <copyright>2012 by jwheat</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
@@ -51,7 +51,5 @@
         </splash>
         <theme>default</theme>
     </mobileweb>
-    <modules>
-        <module platform="commonjs" version="2.3.0">ti.cloud</module>
-    </modules>
+    <modules/>
 </ti:app>

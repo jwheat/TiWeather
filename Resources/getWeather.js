@@ -1,5 +1,5 @@
 /*
- * TiWeather V0.1
+ * TiWeather
  * Weather app for Appcelerator Titanium
  * =====================================
  * Coded By Jonathan Wheat 
@@ -14,13 +14,12 @@
  * 
  */
 
+// --- shouldn't need to alter anything below this line
+Ti.App.Properties.setInt('wxLocation', wxLocation);
+
 // structire our timestamp
 var d = new Date();
 var currentTS = parseInt(((d.getTime()) / 1000),10);
-
-// zipcode of the place we want the weather for
-var wxLocation = '17019';
-var xhrURL = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D'http%3A%2F%2Fxml.weather.yahoo.com%2Fforecastrss%2F"+wxLocation+"_f.xml'&format=json";
 
 // set up the last updated timestamp
 var lastUpdatedTS = Titanium.App.Properties.getInt('lastUpdatedTS');
@@ -31,24 +30,28 @@ if (lastUpdatedTS == null || lastUpdatedTS < 1347355555) {
 
 // check to see if we need to update the weather
 if (checkNeedsUpdating(currentTS,lastUpdatedTS) && (Titanium.Network.networkType != Titanium.Network.NETWORK_NONE)) {
-	runUpdate(xhrURL,currentTS);
+	runUpdate(wxLocation,currentTS);
 }	
 
 busy = true;
 // pause to display the update box
-setTimeout(checkBusy, 3000);
+//setTimeout(checkBusy, 1000);
 
 busy=false;
 
-function runUpdate(remoteURL,nowTS) {
-		showModalWindow();
-		updateDatabaseFromRemote(remoteURL,nowTS);
-		setTimeout(checkBusy, 5000);
+function runUpdate(wxLocation,nowTS) {
+		//showModalWindow();
+		Ti.API.info("zipcode : " + wxLocation);
+		updateDatabaseFromRemote(wxLocation);
+		setTimeout(checkBusy, 3000);
 }
 
-function updateDatabaseFromRemote(remoteURL,nowTS) {
+function updateDatabaseFromRemote(wxLocation) {
 	max_timestamp = '';
-	
+	var d = new Date();
+	var nowTS = parseInt(((d.getTime()) / 1000),10);
+	var remoteURL = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D'http%3A%2F%2Fxml.weather.yahoo.com%2Fforecastrss%2F"+wxLocation+"_f.xml'&format=json";
+
 	var xhr = Titanium.Network.createHTTPClient();
 	xhr.onload = function() {
 		try {
@@ -121,7 +124,7 @@ function updateDatabaseFromRemote(remoteURL,nowTS) {
 function saveRecord (created,status,code,cdate,day,temp,high,low,text,title,lat,lon,lastupdated) {
 	var db = Titanium.Database.open('tiweather');
 	db.execute('INSERT INTO latest_weather (created,status,code,date,day,temp,high,low,text,title,lat,long,lastupdated) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)',created,status,code,cdate,day,temp,high,low,text,title,lat,lon,lastupdated);
-	Ti.API.info("added weather record for : " + day + " - " + code);
+	//Ti.API.info("added weather record for : " + day + " - " + code);
 	db.close();
 }
 
@@ -180,7 +183,7 @@ function checkBusy() {
 	if (busy) {
 		setTimeout(checkBusy, 5000);
 	} else {
-		closeModalWindow();	
+		//closeModalWindow();	
 	}
 };
 
