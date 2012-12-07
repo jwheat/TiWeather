@@ -199,7 +199,8 @@ function checkNeedsUpdating(nowTS, lastTime) {
 	//var lastUpdatedTS = lastTime
 	var timeDiff = nowTS - lastTime;
 	// check every 15 minutes
-	var delay = 900; //900 = 15 minutes
+	// set this in app.js now
+	//var delay = 900; //900 = 15 minutes
 	if (timeDiff > delay ) {
 		retval = true;
 		Ti.API.info("DB needs updating from remote");

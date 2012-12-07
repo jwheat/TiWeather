@@ -7,10 +7,12 @@
  *  w: http://codedog.net
  *  t: @jonthanpwheat
  * 
- * CREDITS / RECOGNITION
- * =====================
+ * CREDITS / RECOGNITION / LINKS OF INTEREST
+ * =========================================
  * PNG Weather Images supplied by - http://www.youtoart.com/html/Icon/Other/4652.html 
  * Original weather concept pulled from : https://github.com/bob-sims/GWeather
+ * Pull to refresh code was grabbed from here - http://developer.appcelerator.com/blog/2010/05/how-to-create-a-tweetie-like-pull-to-refresh-table.html
+ * Vimeo video of what this looks like on iPhone - https://vimeo.com/55068553
  * 
  * Application Notes :
  * - The database is seeded with some weather, but that will be overwritten.
@@ -21,7 +23,7 @@
 
 // zipcode of the place we want the weather for
 var wxLocation = '17019';
-
+var delay = 900
 
 //bootstrap and check dependencies
 if (Ti.version < 1.8 ) {

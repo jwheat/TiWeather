@@ -300,8 +300,12 @@ table.addEventListener('scrollEnd',function(e)
 		var wxLocation = '17019';  // Dillsburg, PA (current town)
 	}
 	Ti.App.Properties.setInt('wxLocation', wxLocation);
-	
-	runUpdate(wxLocation,currentTS);
+
+	if (isAndroid) {
+		// Include our get weather library because for some reason android can't access it here #stupidAndroidproblems
+		Ti.include(	'/getWeather.js' );
+	}	
+	runUpdate(wxLocation,lastUpdatedTS);
 	setTimeout(endReloading,2000);
 		
 });
@@ -321,6 +325,7 @@ var reloading = false;
     self.add(table);
 //};
 
+/*
 
 	// redraw on focus since user may have changed font size
 	self.addEventListener('focus', function() {
@@ -333,24 +338,6 @@ var reloading = false;
 		Ti.App.Properties.setInt('lastUpdatedTS', currentTS );		
 	});
 	
-/*
-	if (!isAndroid) {
-		var refresh = Titanium.UI.createButton({
-		    systemButton : Titanium.UI.iPhone.SystemButton.REFRESH,
-		    backgroundColor : 'red'
-		});
-		self.setRightNavButton(refresh);
-	}
-	
-	refresh.addEventListener('click',function(){
-		var d = new Date();
-		var currentTS = parseInt(((d.getTime()) / 1000),10);
-		var lastUpdatedTS = Titanium.App.Properties.getInt('lastUpdatedTS');
-		if  (Titanium.Network.networkType != Titanium.Network.NETWORK_NONE) {
-			runUpdate(xhrURL,currentTS);
-		}	
-		Ti.App.Properties.setInt('lastUpdatedTS', currentTS );	
-	});
 */
 	return self;
 }
