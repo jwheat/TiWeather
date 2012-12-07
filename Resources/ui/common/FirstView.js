@@ -301,7 +301,7 @@ table.addEventListener('scrollEnd',function(e)
 	}
 	Ti.App.Properties.setInt('wxLocation', wxLocation);
 
-	if (isAndroid) {
+	if (Titanium.Platform.osname==='android') {
 		// Include our get weather library because for some reason android can't access it here #stupidAndroidproblems
 		Ti.include(	'/getWeather.js' );
 	}	

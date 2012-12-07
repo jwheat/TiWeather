@@ -6,46 +6,24 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.079200 seconds on emulator to get ready
-[DEBUG] net.codedog.tiweather installed? True
+[DEBUG] waited 0.021949 seconds on emulator to get ready
+[DEBUG] net.codedog.tiweather installed? False
 [WARN] Fastdev enabled, but server isn't running, deploying normally
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/ui/common/FirstView.js => /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/bin/assets/Resources/ui/common/FirstView.js
-[TRACE] Generating Java Classes
+[INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
-[DEBUG] copying app icon: /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/bin/assets/Resources/appicon.png
-[DEBUG] generating theme.xml
 [DEBUG] found drawable-long-land-hdpi splash screen at /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-long-land-hdpi/default.png
-[DEBUG] copying /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-long-land-hdpi/default.png splash screen to /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/res/drawable-long-land-hdpi/background.png
 [DEBUG] found drawable-long-land-ldpi splash screen at /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-long-land-ldpi/default.png
-[DEBUG] copying /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-long-land-ldpi/default.png splash screen to /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/res/drawable-long-land-ldpi/background.png
 [DEBUG] found drawable-long-port-hdpi splash screen at /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-long-port-hdpi/default.png
-[DEBUG] copying /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-long-port-hdpi/default.png splash screen to /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/res/drawable-long-port-hdpi/background.png
 [DEBUG] found drawable-long-port-ldpi splash screen at /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-long-port-ldpi/default.png
-[DEBUG] copying /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-long-port-ldpi/default.png splash screen to /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/res/drawable-long-port-ldpi/background.png
 [DEBUG] found drawable-notlong-land-hdpi splash screen at /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-notlong-land-hdpi/default.png
-[DEBUG] copying /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-notlong-land-hdpi/default.png splash screen to /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/res/drawable-notlong-land-hdpi/background.png
 [DEBUG] found drawable-notlong-land-ldpi splash screen at /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-notlong-land-ldpi/default.png
-[DEBUG] copying /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-notlong-land-ldpi/default.png splash screen to /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/res/drawable-notlong-land-ldpi/background.png
 [DEBUG] found drawable-notlong-land-mdpi splash screen at /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-notlong-land-mdpi/default.png
-[DEBUG] copying /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-notlong-land-mdpi/default.png splash screen to /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/res/drawable-notlong-land-mdpi/background.png
 [DEBUG] found drawable-notlong-port-hdpi splash screen at /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-notlong-port-hdpi/default.png
-[DEBUG] copying /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-notlong-port-hdpi/default.png splash screen to /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/res/drawable-notlong-port-hdpi/background.png
 [DEBUG] found drawable-notlong-port-ldpi splash screen at /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-notlong-port-ldpi/default.png
-[DEBUG] copying /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-notlong-port-ldpi/default.png splash screen to /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/res/drawable-notlong-port-ldpi/background.png
 [DEBUG] found drawable-notlong-port-mdpi splash screen at /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-notlong-port-mdpi/default.png
-[DEBUG] copying /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/Resources/android/images/res-notlong-port-mdpi/default.png splash screen to /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/res/drawable-notlong-port-mdpi/background.png
-[DEBUG] found splash screen at /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/bin/assets/Resources/default.png
-[TRACE] Writing out AndroidManifest.xml
-[DEBUG] adding /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/gen/net/codedog/tiweather/R.java to javac build list
-[DEBUG] adding /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/gen/net/codedog/tiweather/TiweatherActivity.java to javac build list
-[DEBUG] adding /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/gen/net/codedog/tiweather/TiweatherAppInfo.java to javac build list
-[DEBUG] adding /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/gen/net/codedog/tiweather/TiweatherApplication.java to javac build list
-[DEBUG] Building Java Sources: "/Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/gen/net/codedog/tiweather/R.java" "/Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/gen/net/codedog/tiweather/TiweatherActivity.java" "/Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/gen/net/codedog/tiweather/TiweatherAppInfo.java" "/Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/gen/net/codedog/tiweather/TiweatherApplication.java"
 [INFO] Waiting for SDCard to become available..
-[INFO] Compiling Android Resources... This could take some time
-[DEBUG] Android classes.dex built
 [DEBUG] creating unsigned apk: /Users/jwheat/Documents/Titanium Studio Workspace/TiWeather/build/android/bin/app-unsigned.apk
 [DEBUG] from resource zip => assets/Resources/images/01.png
 [DEBUG] from resource zip => assets/Resources/images/02.png
@@ -155,8 +133,10 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.019806 seconds on emulator to get ready
+[DEBUG] waited 0.020182 seconds on emulator to get ready
 [INFO] Installing application on emulator
-[ERROR] Failed installing net.codedog.tiweather: 	pkg: /data/local/tmp/app.apk
-Failure [INSTALL_FAILED_INSUFFICIENT_STORAGE]
+[INFO] Launching application ... TiWeather
+[TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=net.codedog.tiweather/.TiweatherActivity }
 
+[INFO] Deployed TiWeather ... Application should be running.
+[INFO] Android Emulator has exited
